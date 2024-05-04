@@ -56,12 +56,22 @@
         <RadioGroup
             android:layout_width="170dp"
             android:layout_height="match_parent"
+            android:checkedButton="@id/rBcolorWhite"
             android:gravity="center_horizontal|center_vertical">
+
+            <RadioButton
+                android:id="@+id/rBcolorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ColorWhite"
+                android:text="White"
+                android:textSize="20sp" />
 
             <RadioButton
                 android:id="@+id/rBcolorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="ColorRed"
                 android:text="Red"
                 android:textSize="20sp" />
 
@@ -69,20 +79,15 @@
                 android:id="@+id/rBcolorBlue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="ColorBlue"
                 android:text="Blue"
-                android:textSize="20sp" />
-
-            <RadioButton
-                android:id="@+id/rBcolorYellow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Yellow"
                 android:textSize="20sp" />
 
             <RadioButton
                 android:id="@+id/rBcolorGreen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="ColorGreen"
                 android:text="Green"
                 android:textSize="20sp" />
 
@@ -116,7 +121,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="chageBgColor"
-            android:text="Button" />
+            android:text="Click to change Background color"
+            android:textSize="15sp" />
 
         <Space
             android:layout_width="wrap_content"

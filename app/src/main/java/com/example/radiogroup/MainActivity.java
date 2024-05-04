@@ -6,14 +6,13 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Switch;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout main;
     Switch sW1;
-    RadioButton rBcolorRed, rBcolorBlue, rBcolorYellow, rBcolorGreen;
+    RadioButton rBcolorRed, rBcolorBlue, rBcolorGreen, rBcolorWhite;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +27,10 @@ public class MainActivity extends AppCompatActivity {
                 main.setBackgroundColor(Color.RED);
             } else if (rBcolorBlue.isChecked()) {
                 main.setBackgroundColor(Color.BLUE);
-            } else if (rBcolorYellow.isChecked()) {
-                main.setBackgroundColor(Color.YELLOW);
-            } else if (rBcolorGreen.isChecked()){
+            } else if (rBcolorGreen.isChecked()) {
                 main.setBackgroundColor(Color.GREEN);
             } else {
-                Toast.makeText(this, "Please choose a color", Toast.LENGTH_SHORT).show();
+                main.setBackgroundColor(Color.WHITE);
             }
         }
     }
@@ -43,7 +40,31 @@ public class MainActivity extends AppCompatActivity {
         sW1 = findViewById(R.id.sW1);
         rBcolorRed = findViewById(R.id.rBcolorRed);
         rBcolorBlue = findViewById(R.id.rBcolorBlue);
-        rBcolorYellow = findViewById(R.id.rBcolorYellow);
         rBcolorGreen = findViewById(R.id.rBcolorGreen);
+        rBcolorWhite = findViewById(R.id.rBcolorWhite);
+    }
+
+    public void ColorWhite(View view) {
+        if (sW1.isChecked()) {
+            main.setBackgroundColor(Color.WHITE);
+        }
+    }
+
+    public void ColorRed(View view) {
+        if (sW1.isChecked()) {
+            main.setBackgroundColor(Color.RED);
+        }
+    }
+
+    public void ColorBlue(View view) {
+        if (sW1.isChecked()) {
+            main.setBackgroundColor(Color.BLUE);
+        }
+    }
+
+    public void ColorGreen(View view) {
+        if (sW1.isChecked()) {
+            main.setBackgroundColor(Color.GREEN);
+        }
     }
 }
